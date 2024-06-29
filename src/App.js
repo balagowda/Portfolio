@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import GlowingCursor from './GlowingCursor';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <GlowingCursor />
+      <div class="area">
+        <ul class="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+
+      <div id="bio">
+        <div class="left">
+          <div class="content-set">
+            <h2>Hi 👋, I'm</h2>
+            <h1>BALACHANDREGOWDA P</h1>
+            <p id="spin"></p>
+          </div>
+        </div>
+        <div class="right">
+          <img src="/man1.png" alt="profile pic" id="pic" />
+        </div>
+      </div>
+
     </div>
   );
 }
