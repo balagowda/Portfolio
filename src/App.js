@@ -1,10 +1,11 @@
 import "./App.css";
 import GlowingCursor from "./Components/GlowingCursor";
+import NavBar from "./Components/NavBar";
 
 function App() {
   return (
     <div className="App">
-      <GlowingCursor />
+      {/* <GlowingCursor /> */}
       <div class="area">
         <ul class="circles">
           <li></li>
@@ -21,14 +22,17 @@ function App() {
         </ul>
       </div>
 
-      <div className="navbar"></div>
-
+      <div className="navbar">
+        <NavBar/>
+      </div>
+    
       <div id="bio">
         <div class="left">
           <div class="content-set">
             <h2>Hi 👋, I'm</h2>
             <h1>BALACHANDREGOWDA P</h1>
             <p id="spin"></p>
+
           </div>
         </div>
         <div class="right">
