@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './GlowingCursor.css';
+import '../Styles/GlowingCursor.css';
 
 const GlowingCursor = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
