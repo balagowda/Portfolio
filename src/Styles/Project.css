@@ -1,0 +1,21 @@
+.project-container{
+    margin: 0;
+    padding: 0;
+}
+
+.headline1{
+    text-align: center;
+    font-size: 1rem;
+    margin: 0;
+    padding-top: 5rem;
+    color: rgb(0, 179, 159);
+    font-weight: 500;
+}
+
+.title{
+    text-align: center;
+    margin: 0;
+    font-size: x-large;
+    color: var(--text-color);
+}
+

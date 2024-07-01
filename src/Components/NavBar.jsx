@@ -6,11 +6,25 @@ import Hamburger from "./Hamburger";
 const NavBar = () => {
 
   const [hamburger, setHamburger] = useState(true);
+  const [isChecked, setIsChecked] = useState(true);
 
   const handleHamClick = () => {
     setHamburger((prevHamburger) => !prevHamburger);
     console.log(hamburger);
   };
+
+  const setDarkMode=()=>{
+    document.querySelector("body").setAttribute('data-theme','dark');
+  }
+  const setLigthMode=()=>{
+    document.querySelector("body").setAttribute('data-theme','light');
+  }
+
+  const toggleTheme = (e) =>{
+    setIsChecked(e.target.checked);
+    if(isChecked) setDarkMode();
+    else setLigthMode();
+  }
 
 
   return (
@@ -18,22 +32,22 @@ const NavBar = () => {
     <div onClick={handleHamClick}>
       <Hamburger />
     </div>
-    <div className="nav-img">
+    {/* <div className="nav-img">
       <img src="/logo_.png" alt="img" />
-    </div>
+    </div> */}
     <nav className="nav-links" id={hamburger ? "display-ham" : ""}>
-        <a href="#projects" class="nav-link">
+        <a href="#project-section" className="nav-link">
           Projects
         </a>
-        <a href="#aboutme" class="nav-link">
+        <a href="#about-section" className="nav-link">
           About Me
         </a>
-        <a href="#contact" class="nav-link">
+        <a href="#contact-section" className="nav-link">
           Contact
         </a>
         
-        <div>
-          <input type="checkbox" id="toggler" class="toggler"/>
+        <div className=".dark-theme-toggle">
+          <input type="checkbox" id="toggler" className="toggler" onChange={toggleTheme} checked={isChecked}/>
         </div>
       </nav>
   </header>
