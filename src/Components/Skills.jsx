@@ -1,6 +1,5 @@
 import React from "react";
 import "../Styles/Skills.css";
-import "react-multi-carousel/lib/styles.css";
 
 const Skills = () => {
   const image = [

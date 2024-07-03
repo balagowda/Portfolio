@@ -9,7 +9,7 @@ import Skills from "./Components/Skills";
 function App() {
   return (
     <div className="App">
-      <GlowingCursor />
+      <GlowingCursor id="color-cursor"/>
       <div className="area">
         <ul className="circles">
           <li></li>
@@ -27,30 +27,32 @@ function App() {
       </div>
 
       <div className="navbar">
-        <NavBar/>
+        <NavBar />
       </div>
-    
-      <div id="bio">
-        <div className="left">
-          <div className="content-set">
-            <h2>Hi 👋, I'm</h2>
-            <h1>BALACHANDREGOWDA P</h1>
-            <p id="spin"></p>
+      <div class="background-image"></div>
 
+      <div id="bio">
+        <div className="children">
+          <div className="left">
+            <div className="content-set">
+              <h2>Hi 👋, I'm</h2>
+              <h1>BALACHANDREGOWDA P</h1>
+              <p id="spin"></p>
+            </div>
           </div>
-        </div>
-        <div className="right">
-          <img src="/man1.png" alt="profile pic" id="pic" />
+          <div className="right">
+            <img src="/man1.png" alt="profile pic" id="pic" />
+          </div>
         </div>
 
         <div className="resume">
           <a href="/resume.pdf" download="BALACHANDREGOWDA_P_Resume.pdf">
-            <button className="button-res">Download Resume
+            <button className="button-res">
+              Download Resume
               <img src="/arrow.png" alt="arrow" />
             </button>
           </a>
         </div>
-
       </div>
 
       <section className="skills-section">
@@ -68,7 +70,6 @@ function App() {
       <section className="contact-section" id="contact-section">
         <Contact />
       </section>
-
     </div>
   );
 }

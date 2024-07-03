@@ -1,57 +1,90 @@
-
 .about-container {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6rem;
-  }
-
-.about-info {
-    padding-left: 20px;
-    margin-top: 50px;
-    margin-bottom: 150px;
-    height: 100%;
-  }
-
-  .title-about{
-    text-align: left;
-    margin: 0;
-    font-size: x-large;
-    color: rgb(0, 179, 159);
+  display: flex;
+  align-items: center;
+  height: 75vh;
 }
 
-  .image-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
+.about-info {
+  flex: 60%; 
+  box-sizing: border-box; 
+  height: 50%;
+  margin-left: 10%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  animation: slideIn 1s ease-in-out, fadeIn 1.5s ease-in-out;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-40%) scale(0.7);
+    opacity: 0;
   }
-  
-  .self-image {
-    width: 250px;
+  100% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
   }
-  
+}
+
+.title-about {
+  text-align: left;
+  margin: 0;
+  font-size: x-large;
+  color: rgb(0, 179, 159);
+}
+
+.image-section {
+  flex: 40%; 
+  box-sizing: border-box; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: slideInRight 1s ease-in-out, fadeIn 1.5s ease-in-out;
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(40%) scale(0.7);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.self-image {
+  width: 250px;
+  border-radius: 15px;
+}
+
+.about-desc-section {
+  color: grey;
+  text-align: justify;
+}
+
+@media only screen and (max-width: 820px) {
+  .about-container {
+    flex-wrap: wrap;
+    gap: 1rem;
+    height: auto;
+  }
+
   .about-info {
-    width: 50%;
-    padding-right: 25px;
+    margin-left: 0;
+    margin: 2rem;
   }
-  
-  .about-desc {
-    color: grey;
-    font-size: 1rem;
+
+  .image-section {
+    margin-bottom: 25px;
   }
-  
-  @media only screen and (max-width: 820px) {
-    .about-container {
-      flex-wrap: wrap;
-      padding: 32px;
-      gap: 3rem;
-    }
-  
-    .about-info {
-      padding-right: 0;
-      /* width: 350px; */
-    }
-  }
-  
+}

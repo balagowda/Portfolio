@@ -16,12 +16,14 @@ body {
 :root{
   --body_background: white;
   --text-color:black;
+  --icon-color:rgb(25, 94, 74);
   /* --animate:rgba(0, 211, 169, 0.1); */
 }
 
 [data-theme="dark"] {
   --body_background: #070303;
   --text-color:#ffffff;
+  --icon-color:black;
 }
 
 code {

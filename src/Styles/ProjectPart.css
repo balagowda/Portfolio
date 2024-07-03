@@ -147,6 +147,10 @@
     .project-text {
       flex: 100%;
     }
+
+    .project-techstacks > img {
+      margin: 0 22px 20px 0;
+    }
   
     .project-image-container > img {
       width: 95%;

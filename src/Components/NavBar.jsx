@@ -32,15 +32,16 @@ const NavBar = () => {
     <div onClick={handleHamClick}>
       <Hamburger />
     </div>
-    {/* <div className="nav-img">
-      <img src="/logo_.png" alt="img" />
-    </div> */}
+    <div className="logo">
+        <a href="/" className="home-link"><img src={`/logo.png`} alt="logo" /></a>
+      </div>
+   
     <nav className="nav-links" id={hamburger ? "display-ham" : ""}>
         <a href="#project-section" className="nav-link">
           Projects
         </a>
         <a href="#about-section" className="nav-link">
-          About Me
+          About
         </a>
         <a href="#contact-section" className="nav-link">
           Contact
